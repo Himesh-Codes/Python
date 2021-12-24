@@ -24,6 +24,6 @@ def printStar(line_number):
         print()
         line_number -= 1
 
-
+# return value is not mandatory for function else None is returned
 returnvalue = printStar(3)
 print(returnvalue)

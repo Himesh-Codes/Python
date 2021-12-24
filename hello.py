@@ -12,4 +12,4 @@ print("Welcome!!, ", name)
 print("This is a python version {}". format(platform.python_version())) 
 
 #from Python 3.6 - F stands for formatting
-print(f'WELCOME!!! {name}')
+print(f'WELCOME!!! {name}, {name}')

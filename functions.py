@@ -17,12 +17,13 @@ def printStar(line_number):
 
         while current_index != 0:
 
+
             print("*", end=" ", flush=True)
             current_index -= 1
         # print a new line after each iteration
         print()
         line_number -= 1
 
-
+# return value is not mandatory for function else None is returned
 returnvalue = printStar(3)
 print(returnvalue)

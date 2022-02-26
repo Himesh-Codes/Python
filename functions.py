@@ -17,13 +17,35 @@ def printStar(line_number):
 
         while current_index != 0:
 
-
             print("*", end=" ", flush=True)
             current_index -= 1
         # print a new line after each iteration
         print()
         line_number -= 1
 
+
 # return value is not mandatory for function else None is returned
 returnvalue = printStar(3)
 print(returnvalue)
+
+
+def printMyName(name, subname=''):
+    print(f'{name}',  ',{subname}' if(subname) else '')
+
+#args
+def printMyNames(*names):
+    if len(names):
+        for name in names:
+            print(name, flush=True)
+
+# kwargs
+def printMyNamesDetails(**names):
+    if len(names):
+        for key in names:
+            print(names[key], flush=True)
+
+printMyName('Himesh')
+printMyNames('Alex', 'Riya')
+printMyNamesDetails(sales = 'Neethu', accounts = 'Jio')
+
+    

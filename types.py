@@ -1,9 +1,10 @@
+from decimal import *
+
 #!/usr/bin/env python3
 """
 Training for types and values
 """
-from decimal import *
-from typing import AsyncGenerator
+
 Companyname = 'x'
 print(type(Companyname))
 

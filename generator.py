@@ -18,6 +18,7 @@ def tokenGenerator(*args):
     elif len(args) == 2:
         specialToken = args[1]
     elif len(args) == 3:
+        name = args[0]
         count = args[2]
     else:
         raise TypeError('maximum 3 argument')

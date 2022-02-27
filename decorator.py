@@ -4,15 +4,15 @@
 """
 import generator
 
-def encoder(encode):
-    encode()
-def encodeToken(string):
+def encodeToken(setToken):
+    string = setToken()
     startString = '&ghas6$87887Ggjsd'
     endString = '+{ndfsdfkkdf*'
     
-    return f'{startString}{string}{endString}'
+    print(f'Encoded : {startString}{string}{endString}')
 
-for token in generator.tokenGenerator('Himesh'):
+for token in generator.tokenGenerator('Himesh', '', 1):
     if token:
         @encodeToken 
-        encoder
+        def setToken():
+            return token

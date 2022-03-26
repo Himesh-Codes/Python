@@ -26,6 +26,7 @@ def tokenGenerator(*args):
     while count != 0:
         count -= 1
         randomcode = ''.join(random.choice(string.ascii_lowercase) for i in range(5))
+        # yield return values one by one until the condition met
         yield f'{name}-{randomcode}-{specialToken}' 
         
 for token in tokenGenerator('TimS'):

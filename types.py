@@ -73,6 +73,9 @@ Sequencial type
 # List
 gateNumbers = [1, 2, 3, 4]
 gateNumbers[2] = 1
+# find index of list
+gateTwoIndex = gateNumbers.index(2)
+print(gateTwoIndex)
 # Tuple - Non mutable
 securityNumbers = (1, 2, 3, 4, 5)
 # securityNumbers[1] = 23 - Throws error if dare to touch the line, so non mutable
@@ -88,6 +91,8 @@ for token in randomTokens:
 constructedTokens = list(range(5))
 constructedTokens[0] = 101
 
+#set
+tokenTypes = {'Numeric', 'Alphanumeric'}
 for token in constructedTokens:
     print(f'Ordered token {token} is generated')
 
@@ -105,6 +110,11 @@ lineTwo = [1, "Katei", 2, "Dimple"]
 # Both result below will same since the value 1 object literal will have same unique id
 print(id(lineOne[0]))
 print(id(lineTwo[0]))
+
+# set usability for comparison
+firstLine = set('We are gonna blast them, asap return to the base.')
+secondLine = set('Operation abort will be frequently communicated, if needs.')
+print(firstLine -  secondLine)
 
 # Is check the values are of same object literal
 if lineTwo[0] is lineOne[0]:

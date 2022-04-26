@@ -73,6 +73,7 @@ Sequencial type
 # List
 gateNumbers = [1, 2, 3, 4]
 gateNumbers[2] = 1
+gateNumbers.insert(0, gateNumbers.pop())
 # find index of list
 gateTwoIndex = gateNumbers.index(2)
 print(gateTwoIndex)
@@ -91,7 +92,7 @@ for token in randomTokens:
 constructedTokens = list(range(5))
 constructedTokens[0] = 101
 
-#set
+#set - donot allow duplicate entry
 tokenTypes = {'Numeric', 'Alphanumeric'}
 for token in constructedTokens:
     print(f'Ordered token {token} is generated')
@@ -111,7 +112,7 @@ lineTwo = [1, "Katei", 2, "Dimple"]
 print(id(lineOne[0]))
 print(id(lineTwo[0]))
 
-# set usability for comparison
+# set usability for comparison, remove contained in first resemble in second, and print first
 firstLine = set('We are gonna blast them, asap return to the base.')
 secondLine = set('Operation abort will be frequently communicated, if needs.')
 print(firstLine -  secondLine)
@@ -125,3 +126,7 @@ if  isinstance(lineOne, tuple) :
     print("Tuple")
 elif isinstance(lineOne, list):
     print("List")
+    
+# Mixed Structure
+mixed = [lineOne, firstLine, securityNumbers]
+print(mixed)

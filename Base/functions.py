@@ -47,5 +47,16 @@ def printMyNamesDetails(**names):
 printMyName('Himesh')
 printMyNames('Alex', 'Riya')
 printMyNamesDetails(sales = 'Neethu', accounts = 'Jio')
+subBranch = {'manager': 'Nikhil', 'sales': 'Hanna'}
+# dictionary can be passed only by this way
+printMyNamesDetails(**subBranch)
 
-    
+#function inside function - after 1st scripts executed 2nd will start
+def printPersonalDetails():
+    print('Arun')
+    def printAddress():
+        print('Mangalassery')
+    print('Neelakandan')
+    printAddress()
+
+printPersonalDetails()

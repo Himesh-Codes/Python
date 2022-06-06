@@ -12,11 +12,17 @@ class Account():
     def addAccount(self, number: str):
         self.accounts.append(number)
         
+    #safe to get the values of object variable using getters
+    def referenceId(self, setter = None):
+        if setter: self._reference_id = setter
+        return self._reference_id
+        
 
 def main():
     account = Account(id=7676)
     account.addAccount('101112322')
     print(account.accounts)
+    print(account.referenceId())
 
 if __name__ == '__main__':
     main()

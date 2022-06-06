@@ -6,8 +6,3 @@ class PersonalDetails():
         if name: self._name = name
         try: return self._name
         except AttributeError: return None
-
-person = PersonalDetails(name='Himesh')
-person2 = PersonalDetails()
-print(person.name())
-print(person2.name())

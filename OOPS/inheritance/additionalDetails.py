@@ -13,17 +13,24 @@ class PersonalAdditionalDetails(PersonalDetails):
     cuurentname = 'none'
     def __init__(self, **details):
         super().__init__(**details)
-
+        self._address = details['address'] if 'address' in details else None
+            
     #overrided the function of parent
     def name(self) -> str:
         cuurentname = super().name()
         if cuurentname:
             cuurentname = cuurentname[::-1]  
         return cuurentname
+    
+    def address(self, setter = None) -> str:
+        if setter: self._address = setter
+        return self._address
 
 
-person = PersonalAdditionalDetails(name='Himesh')
+person = PersonalAdditionalDetails(name='Himesh', address = 'ABC Village, 770')
 person2 = PersonalAdditionalDetails()
 print(person.name())
 print(person2.name())
 print(person.cuurentname)
+print(person.address())
+print(person.dateOfBirth())

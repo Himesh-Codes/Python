@@ -5,13 +5,15 @@ File Operations
 
 class FileOperation():
     
-    def readAllLines(self):
+    # private function
+    def __readAllLines(self):
         # different modes for file operation (r,w,a,+), defualt is read
         file = open('sample.txt', 'r')
         for line in file:
             print(line.rstrip())
             
-    def cloneFile(self):       
+    # single underscore is not restriction
+    def _cloneFile(self):       
         # write a copy of file
         fileopen = open('sample.txt', 'rt')
         #if no such file exist py will create one
@@ -26,5 +28,6 @@ class FileOperation():
         filewrite.close();
             
 file = FileOperation()
-file.readAllLines()
-file.cloneFile()
+# name mangling a magic wand of python allows access private variable
+file._FileOperation__readAllLines()
+file._cloneFile()

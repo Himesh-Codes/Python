@@ -92,8 +92,10 @@ for token in randomTokens:
 constructedTokens = list(range(5))
 constructedTokens[0] = 101
 
-#set - donot allow duplicate entry
-tokenTypes = {'Numeric', 'Alphanumeric'}
+#set - donot allow duplicate entry, not mutable
+tokenTypes: set = {'Numeric', 'Alphanumeric'}
+print(tokenTypes)
+
 for token in constructedTokens:
     print(f'Ordered token {token} is generated')
 
